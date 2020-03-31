@@ -14,9 +14,9 @@ def jhove_jp2(directory):
     dir_path = Path(directory)
     print(f'Processing JP2s in {dir_path}')
     # get list of jp2 files & delete all .*.jp2 dot files
-    jp2_path_list = sorted(root_path.glob('**/*.jp2'))
-    delete_dot_files(root_path)
-    jp2_path_list = sorted(root_path.glob('**/*.jp2'))
+    jp2_path_list = sorted(dir_path.glob('**/*.jp2'))
+    delete_dot_files(dir_path)
+    jp2_path_list = sorted(dir_path.glob('**/*.jp2'))
 
     # instantiate error dictionary
     error_dict = {}
